@@ -1,0 +1,656 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.App {
+  width: 100%;
+  height: 100%;
+}
+.appContent {
+  width: 100%;
+  height: 100%;
+}
+.pageMainDiv {
+  width: 100%;
+  height: 100%;
+}
+.appContainer {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+.appContainer .roomsContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  height: 100%;
+  width: 95%;
+  overflow: scroll;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 10%;
+}
+.navbarRightElements {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 40%;
+  list-style: none;
+}
+.navbarRightElements li:hover {
+  color: rgb(255, 123, 0);
+  cursor: pointer;
+}
+.sideNav {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  width: 20%;
+  height: 90%;
+  margin-top: 1%;
+  margin-left: 1.5%;
+}
+.sideNavTitle {
+  margin-left: 10%;
+  font-size: small;
+}
+.sideNavTitle:hover {
+  font-size: medium;
+  margin-left: 0.5%;
+}
+.sideNav li {
+  height: 20%;
+  text-align: center;
+  padding-top: 5%;
+  border-top: 1px solid rgb(197, 197, 197);
+}
+.sideNav li:last-child {
+  border-bottom: 1px solid rgb(197, 197, 197);
+}
+.sideNav li:hover {
+  color: rgb(255, 123, 0);
+  cursor: pointer;
+}
+.sideNav li a {
+  color: black;
+  text-decoration: none;
+}
+.sideNav li a:hover {
+  color: orange;
+  text-decoration: none;
+}
+.roomDiv {
+  width: 100%;
+  height: 100%;
+}
+.room {
+  width: 100%;
+  height: 60%;
+  border-bottom: 1px solid rgb(194, 194, 194);
+  display: flex;
+  flex-direction: row;
+  background: rgb(248, 248, 248);
+}
+.roomPhotos {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 44%;
+  height: 94%;
+  box-shadow: 1px 1px 2px 2px rgb(187, 187, 187);
+  margin-top: 1%;
+  margin-left: 1%;
+  background: white;
+}
+.roomPhotos img {
+  width: 100%;
+  height: 100%;
+}
+.roomInfo {
+  margin-top: 1%;
+  margin-left: 1%;
+  width: 53%;
+  height: 94%;
+
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+.roomSpecifications {
+  display: flex;
+  flex-direction: inherit;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 30%;
+  border-bottom: 1px solid rgb(236, 236, 236);
+  border-top: 1px solid rgb(236, 236, 236);
+  background: white;
+}
+.roomPrice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 25%;
+  border-bottom: 1px solid rgb(236, 236, 236);
+  padding-top: 3%;
+  background: white;
+}
+.chooseDate {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 20%;
+  border-bottom: 1px solid rgb(236, 236, 236);
+  padding-top: 2%;
+  background: white;
+}
+.chooseDate input {
+  height: 40%;
+}
+.submit {
+  width: 100%;
+  height: 13%;
+
+  text-align: center;
+  padding-top: 2%;
+  background: white;
+}
+.submit input {
+  background: rgb(34, 143, 34);
+  border-radius: 4px;
+  border: none;
+  color: white;
+  width: 30%;
+}
+.firstPrice {
+  text-decoration: line-through;
+  margin-top: 2.5%;
+}
+.discount {
+  color: green;
+  margin-top: 2.5%;
+}
+.room-night {
+  margin-top: 2.5%;
+}
+.checkIcon {
+  color: green;
+}
+.submit div form {
+  border: 1px solid red;
+}
+.businessesAllContent {
+  width: 100;
+  height: 100%;
+}
+.businessesContent {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+}
+.businessesSideNavBar {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid green;
+  list-style: none;
+}
+.businessesSideNavBar li {
+  width: 90%;
+  margin-left: 5%;
+  height: 7%;
+  border-bottom: 1px solid purple;
+  text-align: center;
+  padding-top: 2%;
+  cursor: pointer;
+}
+.businessesSideNavBar li:first-child {
+  border-top: 1px solid purple;
+  margin-top: 30%;
+}
+.businessesSideNavBar li:hover {
+  color: orange;
+}
+.businesses {
+  height: 100%;
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 1px solid blue;
+  padding-right: 2.5%;
+  overflow: scroll;
+}
+.business {
+  width: 20%;
+  height: 40%;
+  border: 1px solid gainsboro;
+  margin-top: 5%;
+  margin-left: 5%;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 2px gainsboro;
+}
+.business:hover {
+  box-shadow: 2px 1px 1px rgb(255, 166, 0);
+}
+.businessImgDiv {
+  width: 100%;
+  height: 80%;
+}
+.hotelPht {
+  width: 100%;
+  height: 100%;
+}
+.businessInfo {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  padding-top: 8%;
+  justify-content: space-evenly;
+}
+
+.businessAddress {
+  display: flex;
+}
+.mapMarkericon {
+  color: orange;
+  margin-top: 6%;
+}
+.businessLink {
+  text-decoration: none;
+  color: black;
+}
+.businessLink:hover {
+  text-decoration: none;
+  color: black;
+}
+.allContent {
+  width: 100%;
+  height: 450%;
+  background-color: rgb(238, 238, 238);
+  border: 1px solid red;
+}
+.userProfileContent {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(238, 238, 238);
+  border: 1px solid yellow;
+}
+.userProfileSideNav {
+  height: 60%;
+  width: 15%;
+  box-shadow: 3px 5px gray;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  margin-top: 2.5%;
+  background-color: white;
+}
+.userProfileMainContent {
+  width: 80%;
+  height: 100%;
+}
+.userProfileData {
+  width: 97.5%;
+  height: 60%;
+  margin-top: 3.5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.userOtherData {
+  width: 97.5%;
+  height: 55%;
+  margin-top: 2.5%;
+  background-color: white;
+}
+.tableDiv {
+  width: 95%;
+  height: 30%;
+  margin-left: 2.5%;
+  border-left: 1px solid rgb(211, 211, 211);
+  border-top: 1px solid rgb(211, 211, 211);
+  border-bottom: 1px solid rgb(211, 211, 211);
+  overflow: scroll;
+
+  box-shadow: 3px 5px gray;
+}
+.userProfilePicture {
+  width: 40%;
+  height: 100%;
+  box-shadow: 3px 5px gray;
+  text-align: center;
+  background-color: white;
+}
+.profilePicture {
+  width: 100%;
+  height: 100%;
+}
+.userProfileInfo {
+  padding-top: 2.5%;
+  text-align: center;
+  box-shadow: 3px 5px gray;
+  width: 40%;
+  background-color: white;
+}
+.reservationsTable {
+  width: 100%;
+  height: 100%;
+}
+.reservationsTable tbody {
+  background: white;
+  border-bottom: 1px solid lightgray;
+}
+.reservationsTable th {
+  border-right: 1px solid lightgray;
+  background: rgb(185, 185, 185);
+}
+.reservationsTable td {
+  border-right: 1px solid lightgray;
+}
+.navBarProfileBtn {
+  color: black;
+  text-decoration: none;
+}
+.navBarProfileBtn:hover {
+  color: black;
+  text-decoration: none;
+}
+.userProfileSideNav ul {
+  list-style: none;
+}
+
+.userProfileSideNav ul li {
+  width: 90%;
+  height: 5%;
+  text-align: center;
+  margin-top: 10%;
+  margin-left: 5%;
+  border-bottom: 1px solid rgb(197, 197, 197);
+}
+.userProfileSideNav ul li:first-child {
+  margin-top: 5%;
+}
+.userProfileSideNav ul li a {
+  color: black;
+  text-decoration: none;
+}
+.userProfileSideNav ul li a:hover {
+  color: orange;
+  text-decoration: none;
+}
+.businessReports {
+  width: 95%;
+  height: 22.5%;
+  margin-left: 2.5%;
+  margin-top: 2.5%;
+  box-shadow: 3px 5px gray;
+  border-left: 1px solid rgb(211, 211, 211);
+  border-top: 1px solid rgb(211, 211, 211);
+  display: flex;
+  flex-direction: row;
+}
+.chart {
+  width: 47.5%;
+  height: 85%;
+  background: white;
+  margin-top: 2.5%;
+  margin-left: 2.5%;
+}
+.chart h4 {
+  height: 10%;
+  padding-top: 2%;
+  color: rgb(0, 179, 211);
+  margin-left: 2.5%;
+}
+.pieChart {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  background: white;
+  border-top: 1px solid rgb(211, 211, 211);
+}
+.roomTypeDiv {
+  max-width: 30%;
+  height: 20%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  margin-bottom: 2.5%;
+  margin-top: 2.55%;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 4%;
+  font-size: x-large;
+  background: rgb(0, 179, 211);
+  border-radius: 15px 1px;
+  box-shadow: 3px 5px gray;
+}
+.reservationsProfits {
+  width: 45%;
+  height: 85%;
+  margin-top: 2.5%;
+  margin-left: 2.5%;
+  background: white;
+}
+.reservationsProfits h4 {
+  height: 10%;
+  padding-top: 2%;
+  color: rgb(0, 179, 211);
+  margin-left: 7%;
+}
+.profitsData {
+  width: 95%;
+  height: 52.5%;
+  margin-left: 2.5%;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid rgb(238, 238, 238);
+  border-top: 1px solid rgb(238, 238, 238);
+}
+.reservationsNumber {
+  width: 40%;
+  height: 60%;
+  margin-top: 7.5%;
+  margin-left: 5%;
+  padding-top: 6%;
+  text-align: center;
+  border-radius: 15px 1px;
+  box-shadow: 3px 5px gray;
+  color: rgb(0, 179, 211);
+  background: white;
+  border: 1px solid gray;
+}
+.profitsAmount {
+  width: 40%;
+  height: 60%;
+  margin-top: 7.5%;
+  margin-left: 10%;
+  padding-top: 10%;
+  text-align: center;
+  border-radius: 15px 1px;
+  box-shadow: 3px 5px gray;
+  border: 1px solid gray;
+  color: rgb(0, 179, 211);
+}
+.moneyIcon {
+  font-size: 50px;
+}
+.printProfits {
+  width: 95%;
+  height: 30%;
+  margin-top: 2.5%;
+  margin-left: 2.5%;
+}
+.printProfits Button {
+  width: 80%;
+  height: 30%;
+  margin-left: 10%;
+  margin-top: 7%;
+  background: rgb(0, 179, 211);
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px #a8a8a8;
+}
+.rooms {
+  border-left: 1px solid rgb(211, 211, 211);
+  border-top: 1px solid rgb(211, 211, 211);
+  width: 95%;
+  height: 22.5%;
+  margin-left: 2.5%;
+  margin-top: 2.5%;
+  box-shadow: 3px 5px gray;
+  display: flex;
+}
+.newRoomDiv {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 90%;
+  margin-left: 2.5%;
+  margin-top: 2.5%;
+  background-color: white;
+  box-shadow: 3px 5px gray;
+}
+.newRoomDiv label {
+  width: 95%;
+  margin-left: 2.5%;
+}
+.newRoomDiv h4 {
+  width: 95%;
+  margin-left: 2.5%;
+}
+.newRoomDiv input {
+  width: 95%;
+  margin-left: 2.5%;
+}
+.newRoomDiv select {
+  width: 95%;
+  margin-left: 2.5%;
+}
+.roomTypesSelect {
+  width: 95%;
+  margin-left: 2.5%;
+}
+.newRoomButtons {
+  width: 95%;
+  height: 10%;
+  margin-left: 2.5%;
+  margin-top: 18.5%;
+}
+.newRoomAndType {
+  width: 30%;
+  height: 90%;
+  margin-left: 2.5%;
+  margin-top: 2.5%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 3px 5px gray;
+}
+.newRoomAndTypeContent {
+  width: 95%;
+  margin-left: 2.5%;
+}
+.newRoomAndTypeButtons {
+  width: 95%;
+  margin-left: 2.5%;
+  margin-top: 5%;
+}
+.editRoom {
+  width: 30%;
+  height: 90%;
+  margin-left: 2.5%;
+  margin-top: 2.5%;
+  box-shadow: 3px 5px gray;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+.editRoomContent {
+  width: 95%;
+  margin-left: 2.5%;
+}
+.editRoomButtons {
+  width: 95%;
+  margin-left: 2.5%;
+  margin-top: 5%;
+}
+.loginContent {
+  width: 100%;
+  height: 100%;
+  background: rgb(231, 231, 231);
+}
+.loginForm {
+  width: 25%;
+  height: 50%;
+  margin-top: 0%;
+  margin-left: 37.5%;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 2px 4px 4px 2px gray;
+}
+.inputs {
+  width: 80%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  border-bottom: 1px solid rgb(219, 219, 219);
+}
+.inputs input {
+  width: 100%;
+  height: 25%;
+  margin-top: 8%;
+  border-radius: 5px;
+  border: 2px solid gray;
+  font-weight: normal;
+  color: gray;
+}
+.buttons {
+  width: 80%;
+  height: 20%;
+  margin-top: 10%;
+  margin-left: 10%;
+}
+.buttons button {
+  width: 100%;
+  height: 70%;
+  border: 2px solid gray;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.loginImg {
+  width: 30%;
+  height: 30%;
+  padding-top: 1%;
+  text-align: center;
+}
+.appNameTitle {
+  text-shadow: 1px 3px gray;
+  font-size: xx-large;
+}

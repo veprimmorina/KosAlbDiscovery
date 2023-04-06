@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  background: rgb(218, 218, 218);
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 10%;
+  width: 100%;
+}
+.title {
+  width: 20%;
+}
+#header ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 40%;
+  list-style: none;
+  margin-left: 50%;
+}
+#header ul li {
+  height: 40%;
+  margin-top: 3%;
+}
+#header ul li a {
+  cursor: pointer;
+  color: black;
+}
+#header ul li a:hover {
+  color: rgb(255, 123, 0);
+  cursor: pointer;
+  text-decoration: none;
+}
+.hide {
+  display: none;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  height: 90%;
+  width: 100%;
+}
+.sideNav {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  width: 15%;
+  height: 80%;
+}
+
+.sideNawItems {
+  list-style: none;
+  width: 90%;
+  height: 40%;
+
+  margin-left: 5%;
+}
+.sideNawItems li {
+  height: 20%;
+  text-align: center;
+  margin-top: 5%;
+  border-top: 1px solid rgb(197, 197, 197);
+}
+.sideNawItems li:hover {
+  color: rgb(255, 123, 0);
+  cursor: pointer;
+}
+.main {
+  width: 85%;
+  height: 100%;
+  background: rgb(235, 235, 235);
+}
+.allEvents {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: scroll;
+}
+#happeningEventsDiv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: scroll;
+}
+#futureEventsDiv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: scroll;
+}
+#finishedEventsDiv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: scroll;
+}
+#allEventsDiv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: scroll;
+}
+.event {
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 40%;
+  height: 60%;
+  border-radius: 5%;
+  overflow: hidden;
+  background: white;
+}
+
+.eventImg {
+  width: 100%;
+  height: 55%;
+}
+.eventImg img {
+  width: 100%;
+  height: 100%;
+}
+.nameAndDate {
+  display: flex;
+  flex-direction: column;
+}
+.eventName {
+  width: 100%;
+  height: 3%;
+  font-family: Georgia;
+}
+.eventDate {
+  width: 100%;
+  height: 3%;
+  font-family: Georgia;
+  border-top: 1px solid rgb(218, 218, 218);
+}
+.eventDescription {
+  width: 98%;
+  border-top: 1px solid rgb(218, 218, 218);
+  margin-left: 1%;
+  height: 40%;
+  font-family: Georgia;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+#createEventDiv {
+  width: 100%;
+  height: 100%;
+
+  background: rgb(235, 235, 235);
+}
+#createEventModal {
+  width: 70%;
+  height: 95%;
+  margin-top: 2%;
+  margin-left: 20%;
+}
+.eventButton {
+  margin-left: 200px;
+  background-color: #ffc400; /* Green */
+  border: none;
+  color: white;
+  width: 70px;
+  height: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  margin-bottom: 2%;
+}
+.eventButton:hover {
+  margin-left: 200px;
+  background-color: #ffd038; /* Green */
+  color: rgb(207, 117, 0);
+}
+.modal-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-body label {
+  margin-top: 1%;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px #cedce4;
+}

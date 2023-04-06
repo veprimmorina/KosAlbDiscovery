@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>AlbKos Info</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark mr-0 fixed-top">
+      <div class="container">
+        <a href="# " class="navbar-brand"><img src="./images/logo.png" style="width: 300px;"/></a>
+        
+
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+        
+          
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            </li>
+            <li class=" mx-2 nav-item">
+              <button class="btn btn-primary" type="submit"><i class="bi bi-search" ></i></button>
+            </li>
+            <li class="nav-item">
+              <a href="#learn" class="nav-link">Touristic Place</a>
+            </li>
+            <li class="nav-item">
+              <a href="#questions" class="nav-link">Information</a>
+            </li>
+            <li class="nav-item">
+              <a href="#instructors" class="nav-link">Businesses</a>
+            </li>
+            <li class="nav-item">
+              <a href="#instructors" class="nav-link">Log out</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    <!-- Showcase -->
+    <section
+      class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start" style="background-image: url('https://thumbs.dreamstime.com/b/panoramic-view-city-berat-albania-170240971.jpg'); background-repeat: no-repeat;"
+    >
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <h1>Explore <span class="text-danger"> Kosovo and Albania </span></h1>
+            <p class="lead my-4">
+              <h5 id="application-description">Welcome on AlbKos Info. Here you can explore and discover more about Kosovo and Albania.
+              With ALbKos Info you can find all the informations about Kosovo and Albania, and also you can 
+              planify your holidays. Happy Holidays!
+            </h5>
+            </p>
+            <button
+              class="btn btn-warning btn-lg"
+              data-bs-toggle="modal"
+              data-bs-target="#enroll"
+            >
+              Start Exploring
+            </button>
+          </div>
+          <img
+          style="visibility: hidden;"
+            class="img-fluid w-50 d-none d-sm-block"
+            src="images/flija.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- Boxes -->
+    <section class="p-5">
+      <div class="container">
+        <div class="row text-center g-4">
+          <div class="col-md">
+            <div class="card bg-dark text-light" style="background-image: url('https://a0.muscache.com/im/pictures/13038573-60eb-4c2a-ab07-cdd749a4b905.jpg?im_w=720');">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-image-alt"></i>
+                </div>
+                <h3 class="card-title mb-3" id="first-place-name">Bogë</h3>
+                <p class="card-text" id="first-place-description">
+                  Bogë is a small mountainous village and also a holiday resort village in western Kosovo. Bogë is located in the Bjeshket e Nemuna mountain range on an altitude of about 1,300m - 1,400m
+                </p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-secondary text-light" style="background-image: url('https://albaniatourguide.com/wp-content/uploads/2022/01/Kruje-2-Shutterstock-large-1.jpg');">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-image-alt"></i>
+                </div>
+                <h3 class="card-title mb-3" id="second-place-name">Krujë</h3>
+                <p class="card-text" id="second-place-description">
+                  Krujë is a town and a municipality in north central Albania. Located between Mount Krujë and the Ishëm River, the city is only 20 km north from the capital of Albania, Tirana.
+                </p>
+                <a href="#" class="btn btn-dark">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-dark text-light" style="background-image: url('https://www.powderhounds.com/site/DefaultSite/filesystem/images/Europe/Kosovo/Brezovica/overview/06.jpg');">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-image-alt"></i>
+                </div>
+                <h3 class="card-title mb-3" id="third-place-name">Brezovica</h3>
+                <p class="card-text" id="third-place-description">
+                  Brezovica is a settlement in the Ferizaj municipality in Kosovo, known for its Brezovica ski resort. According to the 2011 Census, Brezovica's total population is 68.Brezovica is located in Kosovo. 
+                </p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Learn Sections -->
+    <section id="learn" class="p-5">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md">
+            <img src="https://i.pinimg.com/736x/1f/45/2e/1f452ed682af712a561c082d1f558e5c.jpg" class="img-fluid" alt="" />
+          </div>
+          <div class="col-md p-5">
+            <h2>Best Place to visit in Spring</h2>
+            <p class="lead">
+              Berat is a city on the Osum River, in central Albania. It's known for its white Ottoman houses. On a hilltop, Berat Castle is a huge compound now inhabited by townspeople. Within its walls are Byzantine churches, the Red Mosque and the Onufri National Museum, with Christian icons. East is the Ethnographic Museum, in an 18th-century house, displaying traditional crafts and part of a reconstructed medieval bazaar.
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
+              reiciendis eius autem eveniet mollitia, at asperiores suscipit
+              quae similique laboriosam iste minus placeat odit velit quos,
+              nulla architecto amet voluptates?
+            </p>
+            <a href="#" class="btn btn-light mt-3">
+              <i class="bi bi-chevron-right"></i> Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="learn" class="p-5 bg-dark text-light">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md p-5">
+            <h2>About Kosovo and Albania</h2>
+            
+            <p>
+              Albania–Kosovo relations (Albanian: Marrëdhëniet Shqiptaro-Kosovare) refer to the current, cultural and historical relations of Albania and Kosovo. Albania has an embassy in Pristina and Kosovo has an embassy in Tirana. There are 1.8 million Albanians living in Kosovo - officially 92.93% of Kosovo's entire population - and Albanian is an official language and the national language of Kosovo. Likewise, the peoples of the two countries share common traditions and folklore. Kosovo is the birthplace of Albanian nationalism such as the League of Prizren. In addiiton, the strong relations are highlighted in successive polls showing majority of ethnic Albanians in both states wanting unification. Both countries and their citizens refer to the relationship as "one nation, two states" as highlighted in the popular pan-Albanian slogan "jemi nje"(we are one).
+              
+            </p>
+            <a href="#" class="btn btn-light mt-3">
+              <i class="bi bi-chevron-right"></i> Read More
+            </a>
+          </div>
+          <div class="col-md">
+            <img src="https://emerging-europe.com/wp-content/uploads/2019/12/bigstock-flags-of-kosovo-and-albania-pa-335344576.jpg" class="img-fluid" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md">
+            <h2 class="text-center mb-4">Contact Info</h2>
+            <ul class="list-group list-group-flush lead">
+              <li class="list-group-item">
+                <span class="fw-bold ">Police number:</span> <span class="text-primary">922 (Kosovo),</span> <span class="text-danger">129 (Albania)</span>
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold ">Firefighters number:</span> <span class="text-primary">93 (Kosovo),</span> <span class="text-danger">128(Albania)</span>
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold ">Hospital emergency number:</span> <span class="text-primary">94 (Kosovo),</span><span class="text-danger">127 (Albania)</span> 
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Airoport number:</span><span class="text-primary">+383 (0) 38 548 900 (Kosovo),</span> <span class="text-danger"> 02 381 1575 (Albania)</span> 
+                
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold ">Bus Station number: </span><span class="text-primary">+383 (0) 38 550 001 (Kosovo), </span><br><span class="text-danger">+355 4 221 1111(Albania)</span>
+                
+              </li>
+            </ul>
+          </div>
+          <div class="col-md text-center">
+            <div id="map" ></div>
+            <a href="hartaEng.html" class="btn btn-dark my-4" > <i class="bi bi-chevron-right">Open Map</i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Question Accordion -->
+    
+    <section id="instructors" class="p-5 bg-primary">
+      <div class="container">
+        <h2 class="text-center text-white">Businesses</h2>
+        <p class="lead text-center text-white mb-5">
+          Hotels and restaurants
+        </p>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src="https://q-xx.bstatic.com/xdata/images/hotel/840x460/297021279.jpg?k=fff3b98086482f14f3b35576b36d6ad5ef670166009d769138faaff535ed7d43&o="
+                  class="rounded-circle mb-3"
+                  alt="" width="280px" height="200px"
+                />
+                <h3 class="card-title mb-3" id="first-hotel">Hotel Brezovica</h3>
+                <p class="card-text" id="hotel-description">
+                  Brezovicë, Ferizaj.<br>
+                  Kosovo<br>
+                  <i class="bi bi-star" style="color: #f3da35"></i>
+                  <i class="bi bi-star" style="color: #f3da35"></i>
+                  <i class="bi bi-star" style="color: #f3da35"></i>
+                  <i class="bi bi-star" style="color: #f3da35"></i>
+                  <i class="bi bi-star" style="color: #f3da35"></i>
+                  <i class="bi bi-pin-map-fill" ></i>
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+               
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src="https://dynamic-media-cdn.tripadvisor.com/media/photo-s/02/b1/5a/38/filename-main-view-jpg.jpg?w=600&h=-1&s=1"
+                  class="rounded-circle mb-3"
+                  alt="" width="280px" height="200px"
+                />
+                <h3 class="card-title mb-3">Hotel Freskia</h3>
+                <p class="card-text">
+                  Velipojë, Shkodër <br>
+                  Albania<br>
+                  <i class="bi bi-star" style="color: #f3da35"></i>
+                  <i class="bi bi-star" style="color: #f3da35"></i>
+                  <i class="bi bi-star" style="color: #f3da35"></i>
+                  <i class="bi bi-star" style="color: #f3da35"></i>
+                  
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src="https://images.trvl-media.com/hotels/38000000/37110000/37103500/37103469/6ddf1d88.jpg?impolicy=resizecrop&rw=670&ra=fit"
+                  class="rounded-circle mb-3"
+                  alt="" width="280px" height="200px"
+                />
+                <h3 class="card-title mb-3">Hotel Luxury</h3>
+                <p class="card-text">
+                 Ksamil, Sarandë.<br>
+                 Albania.<br>
+                 <i class="bi bi-star" style="color: #f3da35"></i>
+                  <i class="bi bi-star" style="color: #f3da35"></i>
+                  <i class="bi bi-star" style="color: #f3da35"></i>
+                  <i class="bi bi-star" style="color: #f3da35"></i>
+                  <i class="bi bi-star" style="color: #f3da35"></i>
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src="https://www.albania-hotel.com/images/hotelimages/Hotel_351_Rafaelo_Hotel_Resort_Shengjin.jpg"
+                  class="rounded-circle mb-3"
+                  alt="" width="280px" height="200px"
+                />
+                <h3 class="card-title mb-3">Rafaello Resort</h3>
+                <p class="card-text">
+                  Shëngjin, Lezhë.<br>
+                  Albania<br>
+                  <i class="bi bi-star" style="color: #f3da35"></i>
+                  <i class="bi bi-star" style="color: #f3da35"></i>
+                  <i class="bi bi-star" style="color: #f3da35"></i>
+                  <i class="bi bi-star" style="color: #f3da35"></i>
+                  <i class="bi bi-star" style="color: #f3da35"></i>
+                </p>
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Map -->
+    
+    <div
+  id="carouselVideoExample"
+  class="carousel slide carousel-fade"
+  data-mdb-ride="carousel"
+>
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-mdb-target="#carouselVideoExample"
+      data-mdb-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+    ></button>
+    <button
+      type="button"
+      data-mdb-target="#carouselVideoExample"
+      data-mdb-slide-to="1"
+      aria-label="Slide 2"
+    ></button>
+    <button
+      type="button"
+      data-mdb-target="#carouselVideoExample"
+      data-mdb-slide-to="2"
+      aria-label="Slide 3"
+    ></button>
+  </div>
+
+  <!-- Inner -->
+  <div class="carousel-inner my-5">
+    <!-- Single item -->
+    <div class="carousel-item active">
+      <video class="img-fluid" autoplay loop muted>
+        <source src="https://mdbcdn.b-cdn.net/img/video/Tropical.mp4" type="video/mp4" />
+      </video>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Visit Kosovo & ALbania</h5>
+        
+      </div>
+    </div>
+
+</div>
+<!-- Carousel wrapper -->
+
+    <!-- Footer -->
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+      <div class="container">
+        <ul>
+          <li >
+            ALbKos Info
+          </li>
+        <p class="lead">Copyright &copy; 2021 Frontend Bootcamp</p>
+
+        <a href="#" class="position-absolute bottom-0 end-0 p-5">
+          <i class="bi bi-arrow-up-circle h1"></i>
+        </a>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="enroll"
+      tabindex="-1"
+      aria-labelledby="enrollLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="enrollLabel">Enrollment</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="lead">Fill out this form and we will get back to you</p>
+            <form>
+              <div class="mb-3">
+                <label for="first-name" class="col-form-label">
+                  First Name:
+                </label>
+                <input type="text" class="form-control" id="first-name" />
+              </div>
+              <div class="mb-3">
+                <label for="last-name" class="col-form-label">Last Name:</label>
+                <input type="text" class="form-control" id="last-name" />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="col-form-label">Email:</label>
+                <input type="email" class="form-control" id="email" />
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="col-form-label">Phone:</label>
+                <input type="tel" class="form-control" id="phone" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+
+    <script>
+      mapboxgl.accessToken =
+        'pk.eyJ1IjoiYnRyYXZlcnN5IiwiYSI6ImNrbmh0dXF1NzBtbnMyb3MzcTBpaG10eXcifQ.h5ZyYCglnMdOLAGGiL1Auw'
+      var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [42.5813722 , 20.8893362],
+        zoom: 1,
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Css/eventStyle.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="../Frontend/Js/eventValidation.js">
+    </script>
+ <!--
+  <script>
+   $(function(){
+      $("#header").load("header.html");
+    });
+  </script>
+  -->
+   <!--
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+      }
+      body{
+        font-family: montserrat;
+      }
+      nav{
+        background: #0082e6;
+        height: 90px;
+        width: 100%;
+      }
+      label.logo{
+        color: white;
+        font-size: 35px;
+        line-height: 80px;
+        padding: 0 100px;
+        font-weight: bold;
+      }
+      nav ul{
+        float: right;
+        margin-right: 20px;
+      }
+      nav ul li{
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 5px;
+      }
+      nav ul li a{
+        color: white;
+        font-size: 17px;
+        padding: 7px 13px;
+        border-radius: 5px;
+        text-transform: uppercase;
+      }
+      a.active,a:hover{
+        background: #1b9bff;
+        transition: .5s;
+      }
+    </style>
+      -->
+  <title>Events</title>
+</head>
+<body>
+<div id="header" class="navbar navbar-light bg-light">
+   <div class="title">
+    <h3>KosAlbDiscovery</h3>
+   </div>
+    
+    <ul>
+      <li><a  class="active" href="#">Home</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Rezervations</a></li>
+      <li><a href="event.html">Events</a></li>
+    </ul>
+
+</div>
+
+
+  <div class="content">
+
+    <div class="sideNav">
+
+      <ul class="sideNawItems">
+        <li id="allEventsButton">All Events</li>
+        <li id="futureEventsButton">Future Events</li>
+        <li id="happeningEventsButton">Happening Events</li>
+        <li id="finishedEventsButton">Finished Events</li>
+     
+        <li  type="button" class="" data-toggle="modal" data-target="#createEventModal" id="createEventButton">Create Event</li>
+        <!-- <li>My Events</li> -->
+      </ul>
+
+    </div>
+
+    <div class="main">
+
+
+      <div class="hide" id="allEventsDiv"> </div>
+<div class="hide" id="happeningEventsDiv">
+
+</div>
+
+      <div class="hide" id="finishedEventsDiv">
+
+      </div>
+
+      <div class="hide" id="futureEventsDiv">
+
+      </div>
+    <!--create event div-->
+    <div class="hide" id="createEventDiv">
+<!-- <p>create event div</p> -->
+<!-- Button trigger modal 
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    Launch demo modal
+  </button>
+ --> 
+ <!-- Modal -->
+ <div class="modal fade" id="createEventModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Create Event</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" >
+        <form  name="myForm" id="form" method="post" onsubmit="return validateForm()" >
+        <label for="crEventName">Name</label><br>
+        <input type="text" id="crEventName"name="name" placeholder="write name">
+        <div class="error" id="nameErr"></div>
+
+        <label for="crEventDescription">Description</label><br>
+        <textarea name="" id="crEventDescription" cols="30" rows="2"name="description" placeholder="write description"></textarea>
+        <div class="error" id="descriptionErr"></div>
+
+        <label for="crEventStartDate">Start Date</label><br>
+        <input type="date" id="crEventStartDate" name="startDate">
+        <div class="error" id="startDateErr"></div>
+
+        <label for="crEventStartTime">Start Time</label><br>
+        <input type="time" id="crEventStartTime" name="startTime">
+        <div class="error" id="startTimeErr"></div>
+
+        <label for="crEventEndDate">End Date</label><br>
+        <input type="date" id="crEventEndDate"name="endDate">
+        <div class="error" id="endDateErr"></div>
+
+        <label for="crEventPhoto">Photo</label><br>
+        <input type="file" id="crEventPhoto" accept="image/*"name="photo">
+        <img src="" alt="" id="eventimg">
+        <div class="error" id="photoErr"></div>
+        </form>
+        <label for="crEventCity">City</label>
+        <div>
+          <select  id="crEventCity" class="form-control" name="crEventCity" onclick="return false" >
+                     
+          </select>
+        </div>
+
+     
+        <div id="tpdiv">
+          <label for="crEventTouristPlace">Tourist Place</label>
+          <select  id="crEventTouristPlace" class="form-control" name="crEventCity">
+       
+          </select>
+        </div>
+        
+
+        
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="crEventSaveChangesButton"onclick="return validateForm()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+    </div>
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="Js/createEventJS.js"></script>
+  <script src="Js/getCitiesAndTouristPlacesForEvent.js"></script>
+  <script src="Js/getAllEvents.js"></script>
+  <script src="Js/hideEventParts.js"></script>
+  <script src="Js/getHappeningEvents.js"></script>
+  <script src="Js/getFinishedEvents.js"></script>
+  <script src="Js/getFutureEvents.js"></script>
+</body>
+</html>

@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="Css/adminDashboardStyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="Js/chartJS/jquery-2.1.4.min.js"></script>
+    <script src="Js/chartJS/Chart.js"></script>
+    <script src="Js/chartJS.js"></script>
+    <title>Admin Dashboard</title>
+    <script src="../Frontend/Js/AdminValidation.js">
+    </script>
+</head>
+<body>
+
+
+
+
+
+
+
+<div class="dashboardMenu side-nav p-3 mb-2 bg-dark text-white">
+
+    <div class="title">
+
+        <img src="Photos/logo.png" alt="" id="logo">
+        <p style="color:#cedce4; text-align: center; font-size: smaller; letter-spacing: 1.5px;">K O S A L B   D I S C O V E R Y</p>
+    </div>
+
+
+
+    <div class="dashboardItems">
+
+        <p style="color: #6c757d; margin-left: 5%; font-size: smaller;">NAVIGATION</p>
+
+        <li class="side-nav-item">
+            <a data-toggle="collapse" href="#usersMenu" role="button" aria-expanded="false" aria-controls="usersMenu" id="usersButton" >Users</a>
+
+            <div class="collapse" id="usersMenu">
+                <ul class="side-nav-second-level">
+
+                    <li id="adminsButton">Admins</li>
+                    <li id="touristsButton">Tourists</li>
+                    <li id="businessesButton">Businesses</li>
+
+                </ul>
+
+            </div>
+        </li>
+
+        <li class="side-nav-item">
+            <a  data-toggle="collapse" href="#reservationsMenu" role="button" aria-expanded="false" aria-controls="reservationsMenu" id="reservationsButton" >
+
+                <span>Reservations</span>
+            </a>
+
+
+            <div class="collapse" id="reservationsMenu">
+                <ul class="side-nav-second-level">
+                    <li >Manage Reservations</li>
+                    <li >Edit Reservations</li>
+                    <li >New Reservation</li>
+                </ul>
+
+            </div>
+        </li>
+
+
+        <li class="side-nav-item">
+            <a  data-toggle="collapse" href="#eventsMenu" role="button" aria-expanded="false" aria-controls="eventsMenu" id="eventsButton">Events</a>
+
+            <div class="collapse" id="eventsMenu">
+                <ul class="side-nav-second-level">
+                    <li id="eventButton">List of Events</li>
+                    <li id="eventParticipantsButton">Event Participants</li>
+
+                </ul>
+
+            </div>
+        </li>
+
+        <li class="side-nav-item">
+            <a data-toggle="collapse" href="#citiesMenu" role="button" aria-expanded="false" aria-controls="citiesMenu" id="eventsButton">Cities</a>
+
+            <div class="collapse" id="citiesMenu">
+                <ul class="side-nav-second-level">
+                    <li id="addNewCityButton" data-toggle="modal" data-target="#addNewCity">Add New City</li>
+                    <li id="citiesButton">All Cities</li>
+
+                </ul>
+
+            </div>
+        </li>
+
+
+        <li class="side-nav-item">
+            <a data-toggle="collapse" href="#touristPlacesMenu" role="button" aria-expanded="false" aria-controls="touristPlacesMenu" id="eventsButton">Tourist Places</a>
+
+            <div class="collapse" id="touristPlacesMenu">
+                <ul class="side-nav-second-level">
+                    <li id="addNewTouristPlaceButton" data-toggle="modal" data-target="#addNewTouristPlace" >Add New Tourist Place</li>
+                    <li id="placesButton">All Tourist Places</li>
+
+                </ul>
+
+            </div>
+        </li>
+
+
+        <p style="color: #6c757d; margin-left: 5%; margin-top: 10%; font-size: smaller;"></p>
+
+
+
+
+        <li class="side-nav-item">
+            <a href="">My Account</a>
+
+            <div class="collapse">
+                <ul class="side-nav-second-level">
+                    <li >Manage Events</li>
+                    <li >Edit Events</li>
+                    <li >New Event</li>
+                </ul>
+
+            </div>
+        </li>
+
+        <li class="side-nav-item">
+            <a href="">Mail</a>
+
+            <div class="collapse">
+                <ul class="side-nav-second-level">
+                    <li >Manage Events</li>
+                    <li >Edit Events</li>
+                    <li >New Event</li>
+                </ul>
+
+            </div>
+        </li>
+
+        <li class="side-nav-item">
+            <a href="index.html">Log Out</a>
+
+            <div class="collapse">
+                <ul class="side-nav-second-level">
+                    <li >List of Events</li>
+
+                </ul>
+
+            </div>
+        </li>
+
+    </div>
+
+
+</div>
+
+
+<div class="mainContent" >
+    <div class="headerContent" id="headerContent">
+
+        <div class="settings">
+            <ul class="list-group list-group-horizontal settingsItems">
+                <li><p class="dashboardTitle">Dashboard</p></li>
+                <li class="settings-button list-group-item">
+                    <img src="photos/settings-icon.png" alt="" data-toggle="collapse" href="#settingsMenu" role="button" aria-expanded="false" aria-controls="settingsMenu" >
+                    <p style="display: inline; font-size: larger; font-family:Verdana, Geneva, Tahoma, sans-serif;color: #6c757d; margin-left: 5%; letter-spacing: 0.5px;">settings</p>
+                    <div class="collapse p-3 mb-2 bg-dark " id="settingsMenu">
+                        <ul class="list-group">
+                            <li>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input switch" type="checkbox" id="darkModeSwitchCheck" >
+                                    <label class="form-check-label" for="darkModeSwitchCheck">Dark Mode</label>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input switch" type="checkbox" id="lightModeSwitchCheck" checked >
+                                    <label class="form-check-label" for="lightModeSwitchCheck">Light Mode</label>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="personalInformation">
+            <ul class="list-group list-group-horizontal">
+
+                <li class=" list-group-item">
+                    <p id="nameSurname">User</p>
+                </li>
+
+                <li class=" list-group-item">
+                    <img src="Photos/user.png" alt="Profile Picture" style="height: 30px">
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="bodyContent" id="bodyContent">
+
+
+
+        <div class="bodyContentMain" id="bodyContentMain">
+
+            <div class="usersStats">
+
+                <div class="allUsersStats usersStatsChild" id="allUsersStats">
+
+
+                    <div>
+
+                        <p style="font-size: 14px;">Total Users</p>
+                        <img src="Photos/user.png" alt="">
+                    </div>
+                    <div>
+                        <p id="totalUsersNumberP">2</p>
+                        <p style="color: green; font-size: 14px; margin-top: 15%;"></p>
+                    </div>
+
+
+                </div>
+                <div class="TouristsStats usersStatsChild" id="TouristsStats">
+
+
+                    <div>
+
+                        <p style="font-size: 14px;">Tourists</p>
+                        <img src="Photos/camera.png" alt="">
+
+                    </div>
+
+                    <div>
+                        <p id="touristsNumberP">1</p>
+                        <p style="color: green; font-size: 14px; margin-top: 15%;"></p>
+                    </div>
+
+                </div>
+                <div class="BusinessesStats usersStatsChild" id="BusinessesStats">
+
+                    <div>
+
+
+                        <p style="font-size: 14px;">Businesses</p>
+                        <img src="Photos/hotelLogo.png" alt="">
+                    </div>
+
+                    <div>
+                        <p id="businessesNumberP">1</p>
+                        <p style="color: green; font-size: 14px; margin-top: 15%;"></p>
+                    </div>
+                </div>
+
+                <div class="reservationsStats usersStatsChild" id="reservationsStatsChild">
+                    <div>
+                        <p style="font-size: 14px;">Reservations</p>
+                        <img src="Photos/reservationLogo.png" alt="">
+                    </div>
+
+                    <div>
+                        <p id="reservationsNumberP">9</p>
+                        <p style="color: green; font-size: 14px; margin-top: 15%;"></p>
+                    </div>
+                </div>
+
+                <div class="eventsStats usersStatsChild" id="eventsStatsChild">
+                    <div>
+                        <p style="font-size: 14px;">Events</p>
+                        <img src="Photos/eventLogo.png" alt="">
+                    </div>
+
+                    <div>
+                        <p id="eventsNumberP">8</p>
+                        <p style="color: green; font-size: 14px; margin-top: 15%;"></p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="usersDiagram" id="usersDiagramDiv">
+                <div style="display: flex; flex-direction: row; justify-content: space-evenly; margin-top: 5%; font-family: Verdana; font-size: larger;">
+                    <p style="color:#FF69B4;">Tourists</p> <p style="color:#00BFFF;">Businesses</p>
+                </div>
+
+
+                <div class="container my-4">
+
+                    <div style=" padding-left:8%;">
+                        <canvas id="mycanvas" width="400" height="400">
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="hide" id="allAdminsTable">
+
+            <p style ="color: #6c757d; margin-left: 1%;  font-size: x-large;">Admins</p>
+
+            <div style="width: 100%; height: 80%; overflow: scroll;">
+                <table class="table table-bordered table-dark" id="table" style="width: 100%;">
+                    <thead style="font-family: 'Courier New', Courier, monospace;">
+                    <tr>
+
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Surname</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Password</th>
+                        <th scope="col">Role</th>
+
+
+                    </tr>
+                    </thead>
+                    <tbody id="adminsTableBody" style="font-family: 'Courier New', Courier, monospace;">
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div class="hide" id="allTouristsTable">
+
+            <p style ="color: #6c757d; margin-left: 1%;  font-size: x-large;">Tourists</p>
+
+            <div style="width: 100%; height: 80%; overflow: scroll;">
+                <table class="table table-bordered table-dark" id="table" style="width: 100%;">
+                    <thead style="font-family: 'Courier New', Courier, monospace;">
+                    <tr>
+
+                        <th scope="col">#</th>
+                        <th scope="col">Full Name</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Password</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Status</th>
+
+
+                    </tr>
+                    </thead>
+                    <tbody id="touristsTableBody" style="font-family: 'Courier New', Courier, monospace;">
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <div class="hide" id="allBusinessesTable">
+            <p style ="color: #6c757d; margin-left: 1%;  font-size: x-large;">Businesses</p>
+
+            <div style="width: 100%; height: 80%; overflow: scroll;">
+                <table class="table table-bordered table-dark" id="table" style="width: 100%;">
+                    <thead style="font-family: 'Courier New', Courier, monospace;">
+                    <tr>
+
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Password</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">Owner Id</th>
+                        <th scope="col">Fiscal Number</th>
+                        <th scope="col">Business Number</th>
+                        <th scope="col">Business Activity</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">City ID</th>
+
+
+
+                    </tr>
+                    </thead>
+                    <tbody id="tableBody" style="font-family: 'Courier New', Courier, monospace;">
+
+                    </tbody>
+                </table>
+
+
+                <div class="businessEditForm">
+                    <!-- Button trigger modal
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                        Launch demo modal
+                      </button>
+                      -->
+                    <!-- Modal -->
+                    <!-- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Edit Business</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+
+
+
+
+
+                          <div class="modal-body" >
+                              <form  name="myForm" id="form" method="post" onsubmit="return validateForm()" >
+                            <label for="bid">Business Id</label><br>
+                            <input type="text" id="bid" disabled><br>
+
+                            <label for="bname">Name</label><br>
+                            <input type="text" id="bname" name="name"><br>
+
+                            <label for="bemail">Email</label><br>
+                            <input type="text" id="bemail"name="email"><br>
+
+                            <label for="bpassword">Password</label><br>
+                            <input type="text" id="bpassword"name="password"><br>
+
+                            <label for="busername">Username</label><br>
+                            <input type="text" id="busername"name="username"><br>
+
+                            <label for="bphoneNum">Phone Number</label><br>
+                            <input type="text" id="bphoneNum"name="number"><br>
+
+                            <label for="bownerId">Owner Id</label><br>
+                            <input type="text" id="bownerId"name="id"><br>
+
+                            <label for="bfiscalNum">Fiscal Number</label><br>
+                            <input type="text" id="bfiscalNum"name="fiscal"><br>
+
+                            <label for="bnumber">Business Number</label><br>
+                            <input type="text" id="bnumber"name="business"><br>
+
+                            <label for="bactivity">Business Activity</label><br>
+                            <input type="text" id="bactivity"name="activity"><br>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id="saveChangesButton"onclick="return validateForm()">Save changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
+                </div>
+            </div>
+
+
+            <!-- <div class="businessesNavigation" >
+
+              <div>
+                  <label for="idField" style="font-family: 'Courier New', Courier, monospace; color: #6c757d;">Business Id:</label>
+                  <input type="text" id="idField" >
+              </div>
+
+
+                <div style="display: flex; flex-direction: row; justify-content: space-evenly; width: 30%;">
+                  <button class="btn btn-dark" id="editBusinessButton" data-toggle="modal" data-target="#exampleModalCenter" >Edit</button>
+                  <button class="btn btn-dark" id="deleteBusinessButton">Delete</button>
+
+                </div>
+
+
+            </div> -->
+
+
+        </div>
+
+        <div class="hide" id="allCitiesTable">
+
+            <p style ="color: #6c757d; margin-left: 1%;  font-size: x-large;">Cities</p>
+
+            <div style="width: 100%; height: 80%; overflow: scroll;">
+                <table class="table table-bordered table-dark" id="table" style="width: 100%;">
+                    <thead style="font-family: 'Courier New', Courier, monospace;">
+                    <tr>
+
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Zip Code</th>
+
+
+
+                    </tr>
+                    </thead>
+                    <tbody id="citiesTableBody" style="font-family: 'Courier New', Courier, monospace;">
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <div class="hide" id="allEventsTable">
+
+            <p style ="color: #6c757d; margin-left: 1%;  font-size: x-large;">Events</p>
+
+            <div style="width: 100%; height: 80%;" class='eventsTableDiv'>
+                <table class="table table-bordered table-dark" id="table" style="width: 100%;">
+                    <thead style="font-family: 'Courier New', Courier, monospace;">
+                    <tr>
+
+                        <th scope="col">#</th>
+                        <th scope="col">Full Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Start Date</th>
+                        <th scope="col">End date</th>
+                        <th scope="col">Start time</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Photopath</th>
+                        <th scope="col">Tourist place</th>
+                        <th scope="col">City name</th>
+                        <th scope="col">Username</th>
+
+
+                    </tr>
+                    </thead>
+                    <tbody id="eventsTableBody" style="font-family: 'Courier New', Courier, monospace;">
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+
+
+
+        <div class="hide" id="allEventsParticipantsTable">
+
+            <p style ="color: #6c757d; margin-left: 1%;  font-size: x-large;">Event Participants</p>
+
+            <div style="width: 100%; height: 80%; overflow: scroll;">
+                <table class="table table-bordered table-dark" id="table" style="width: 100%;">
+                    <thead style="font-family: 'Courier New', Courier, monospace;">
+                    <tr>
+
+                        <th scope="col">#</th>
+                        <th scope="col">Full Name</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Event</th>
+
+
+
+
+                    </tr>
+                    </thead>
+                    <tbody id="eventsParticipantsTableBody" style="font-family: 'Courier New', Courier, monospace;">
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+
+        <div class="hide" id="allPlacesTable">
+
+            <p style ="color: #6c757d; margin-left: 1%;  font-size: x-large;">Tourist Places</p>
+
+            <div style="width: 100%; height: 80%; overflow: scroll;">
+                <table class="table table-bordered table-dark" id="table" style="width: 100%;">
+                    <thead style="font-family: 'Courier New', Courier, monospace;">
+                    <tr>
+
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">City id</th>
+
+
+
+                    </tr>
+                    </thead>
+                    <tbody id="placesTableBody" style="font-family: 'Courier New', Courier, monospace;">
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+
+
+
+        <div class="hide" id="blockedUsersTable">
+            <p style ="color: #6c757d; margin-left: 1%;  font-size: x-large;">Blocked Users</p>
+            <div style="width: 100%; height: 80%; overflow: scroll; ">
+
+            </div>
+        </div>
+        <!-- all cities Div -->
+        <div class="hide" id="allCities">
+            <p style ="color: #6c757d; margin-left: 1%;  font-size: x-large;">Cities</p>
+            <div style="width: 100%; height: 80%; overflow: scroll; ">
+
+            </div>
+        </div>
+
+        <!-- Add new city Modal  -->
+        <div class="modal fade" id="addNewCity" tabindex="-1" role="dialog" aria-labelledby="addNewCity" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Add New City</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" >
+                        <form  name="CityForm" method="post" onsubmit="return validateCity()" >
+
+                            <label for="newCityName">Name</label><br>
+                            <input type="text" id="newCityName"name="name" placeholder="write name"><br>
+
+
+                            <label for="newCityZip">Zip Code</label><br>
+                            <input type="text" id="newCityZip"name="zip" placeholder="write Zip Code"><br>
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="citySaveChangesButton"onclick="return validateCity()">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- end of new city modal -->
+
+
+        <!-- all tourist places Div -->
+        <div class="hide" id="allCities">
+            <p style ="color: #6c757d; margin-left: 1%;  font-size: x-large;">Tourist Places</p>
+            <div style="width: 100%; height: 80%; overflow: scroll; ">
+
+            </div>
+        </div>
+
+        <!-- Add new tourist place Modal  -->
+        <div class="modal fade" id="addNewTouristPlace" tabindex="-1" role="dialog" aria-labelledby="addNewTouristPlace" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Add New Tourist Place</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" >
+
+                        <form  name="Tourist"  method="post" onsubmit="return validateTourist()" >
+
+                            <label for="newTouristPlaceName">Name</label><br>
+                            <input type="text" id="newTouristPlaceName" placeholder="write name"name="name"><br>
+
+
+                            <label for="newTouristPlaceCity">City</label>
+                            <select  id="newTouristPlaceCity" class="form-control" name="newTouristPlaceCity" style="width:175px ">
+                                <option value='Durres'>Durres</option>
+                                <option value='Tirane'>Tirane</option>
+                                <option value='Kruje'>Kruje</option>
+                                <option value='Lipjan'>Lipjan</option>
+                                <option value='Prishtine'>Prishtine</option>
+                                <option value='Vlore'>Vlore</option>
+                                <option value='Berat'>Berat</option>
+                                <option value='Lipjan'>Lipjan</option>
+                            
+                            </select>
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="touristPlaceSaveChangesButton"onclick="return validateTourist()">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- end of new tourist place modal -->
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="Js/adminDashboardJS.js"></script>
+<script src="Js/dashboardHideParts.js"></script>
+<script src="Js/getBusinesses.js"></script>
+<script src="Js/editBusiness.js"></script>
+<script src="Js/dashboardStatsJs.js"></script>
+<script src="Js/getTourists.js"></script>
+<script src="Js/addCitiesAndTouristPlaces.js"></script>
+<script src="Js/getCitiesAndTouristPlaces.js"></script>
+<script src="Js/getCities.js"></script>
+<script src="Js/getTouristPlaces.js"></script>
+<script src="Js/getAdmins.js"></script>
+<script src="Js/allEventsTable.js"></script>
+<script src="Js/eventParticipants.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" style="width: 100%; height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/checkoutJs.css}"/>
+
+</head>
+<body style="width: 100%; height: 100%; background: #eeeeee">
+<div class="allContent" style=" width: 30%;
+    height: 55%;
+    margin-left: 35%;
+    margin-top: 10%;
+    border-radius: 15px;
+    background: #ffffff;
+text-align: center">
+    <div style="display: flex;">
+        <h5 style="margin-left: 17%; font-family: Verdana;">KOSALB</h5>
+        <img src="logo.png" style="width: 35%; height: 25%; margin-left: 0%;">
+        <h5 style="font-family: Verdana;">DISCOVERY</h5>
+    </div>
+    <div class="reservationData" style="width: 100%; border-top: 1px solid #efefef;
+    height: 70%; display: flex; flex-direction: column;">
+
+
+
+        <label style="border-bottom: 1px solid #00a6ff;border-top: 1px solid #00a6ff; margin-top: 9%;font-family: Verdana;"> <img src="hotel.png" alt="Hotel: " />   <span th:text='${hotelName}' /></label>
+        <label style="border-bottom: 1px solid #00a6ff; margin-top: 3%; font-family: Verdana;"><img src="room.png"  alt="Room type: " /> <span th:text='${roomType}' /></label>
+        <label style="border-bottom: 1px solid #00a6ff; margin-top: 3%; font-family: Verdana;"><img src="price.png" alt="Price: "/> <span th:text='${amount/100}' />€</label>
+
+    </div>
+
+    <div class="paymentFrom" style="padding-top: 1.5%;">
+        <form action='/pay/charge' method='POST' id='checkout-form'>
+            <input type='hidden' th:value='${amount}' name='amount' />
+
+            <!-- NOTE: data-key/data-amount/data-currency will be rendered by Thymeleaf -->
+            <script src='https://checkout.stripe.com/checkout.js' class='stripe-button' th:attr='data-key=${stripePublicKey},
+         data-amount=${amount},
+         data-currency=${currency}' data-name='Baeldung' data-description='Spring course checkout'
+                    data-image='https://www.baeldung.com/wp-content/themes/baeldung/favicon/android-chrome-192x192.png'
+                    data-locale='auto' data-zip-code='false'>
+            </script>
+
+
+        </form>
+    </div>
+
+
+</div>
+</body>
+</html>

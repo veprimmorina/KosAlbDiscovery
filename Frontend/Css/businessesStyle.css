@@ -1,0 +1,42 @@
+.wrapper{
+    margin-top: 80px;
+    height: 1200px;
+    display: flex;
+    overflow-x: auto;
+    margin-left: 50px;
+
+}
+
+.flexi{
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    align-items: center;
+    height: 800px;
+
+}
+.wrapper::-webkit-scrollbar{
+    width: 0;
+}
+.wrapper .item{
+    width: 200px;
+    height: 110px;
+    line-height: 110px;
+    text-align: center;
+    background-color: #ddd;
+    margin-right: 40px;
+    margin-left: 70px;
+    margin-right: 30px;
+
+}
+.business-image{
+    height: 168px;
+    width: 230px
+}
+.col{
+    margin-top: 50px;
+    text-align: center;
+}
+.sideNav{
+    height:800px ;
+}

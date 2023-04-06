@@ -1,0 +1,17 @@
+server:
+  port: 7000
+
+  stripe_secret_key: sk_test_51J59QBBGVeEfRZf7FVc7X8M3rFFdxO9SsDn6jVSBVpb8qF6Zx75JfHciDXuMbSuDTc3wqRqTouq33qZv7bhWsPVW00RiaWqnAb
+
+  stripe_public_key: pk_test_51J59QBBGVeEfRZf72R7Puxe9772bDmnGRpinGgr6ZEzlbOECxJsMO5BYVLZC5IcC400OEDd0gD4vJ0uwAjwgCsF500gq1lKYYn
+
+spring:
+  application:
+    name: payment-service
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8083/eureka
+    register-with-eureka: true
+    fetch-registry: true
