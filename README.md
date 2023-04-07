@@ -1,4 +1,6 @@
 # KosAlbDiscovery
+
+Technology used: Spring Boot, Java, JavaScript, ReactJS, Bootstrap, MSSQL.
  
 KosAlbDiscovery is an innovative web application designed for tourists who want to explore the beautiful places in Kosovo and Albania. This application is developed using microservice architecture, which ensures smooth and efficient operation of the application, and is designed for tourists who want to explore the beautiful and historic places of Kosovo and Albania
 
